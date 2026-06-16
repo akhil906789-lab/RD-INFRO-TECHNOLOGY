@@ -1,0 +1,72 @@
+# TASK 3 - Auto Scaling and Load Balancer Setup
+
+## Objective
+To configure Auto Scaling and an Application Load Balancer (ALB) on AWS EC2 for high availability and automatic scaling of web servers.
+
+---
+
+## Services Used
+- Amazon EC2
+- Amazon Machine Image (AMI)
+- Launch Template
+- Auto Scaling Group (ASG)
+- Application Load Balancer (ALB)
+- Target Group
+
+---
+
+## Steps Performed
+
+### 1. Created an EC2 Instance
+- Launched an Ubuntu EC2 instance.
+- Installed Apache Web Server.
+- Modified the `index.html` file with custom content.
+
+### 2. Created an AMI
+- Generated an Amazon Machine Image (AMI) from the configured EC2 instance.
+
+### 3. Created a Launch Template
+- Used the AMI to create a Launch Template.
+- Selected the existing key pair and security group.
+
+### 4. Created an Auto Scaling Group
+- Created an Auto Scaling Group named **Task3-ASG**.
+- Configured desired capacity as **2 instances**.
+- Distributed instances across multiple Availability Zones.
+
+### 5. Created an Application Load Balancer
+- Created an internet-facing Application Load Balancer named **Task3-ALB**.
+- Configured HTTP listener on port 80.
+
+### 6. Configured Target Group
+- Registered EC2 instances with the target group.
+- Verified that both targets became healthy.
+
+### 7. Verified Load Balancing
+- Accessed the DNS name of the Load Balancer.
+- Successfully displayed the web page:
+
+```
+Task 3 Server
+RD INFRO TECHNOLOGY Internship
+```
+
+---
+
+## Result
+Successfully implemented Auto Scaling and Load Balancing in AWS. The website was accessible through the Application Load Balancer, and the target instances were healthy.
+
+---
+
+## Screenshots
+- EC2 Instances
+- Auto Scaling Group
+- Load Balancer
+- Target Group (Healthy Targets)
+- Browser Output
+- AMI Status
+
+---
+
+## Outcome
+Task 3 completed successfully.
