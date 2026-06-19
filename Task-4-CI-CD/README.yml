@@ -1,0 +1,133 @@
+# Task 4 - CI/CD Pipeline Using GitHub Actions and AWS EC2
+
+## Objective
+
+To implement a Continuous Integration and Continuous Deployment (CI/CD) pipeline using GitHub Actions and automatically deploy a website to an AWS EC2 instance.
+
+---
+
+## Tools and Technologies Used
+
+- GitHub
+- GitHub Actions
+- AWS EC2 (Ubuntu)
+- SSH
+- Apache Web Server
+- HTML
+
+---
+
+## Project Structure
+
+```
+RD-INFRO-TECHNOLOGY
+│
+├── .github
+│   └── workflows
+│       └── deploy.yml
+│
+├── Task-4-CI-CD
+│   ├── index.html
+│   ├── README.md
+│   └── Screenshots
+│       ├── 1_Repository_Structure.png
+│       ├── 2_Deploy_YML.png
+│       ├── 3_GitHub_Secrets.png
+│       ├── 4_GitHub_Actions_Success.png
+│       ├── 5_EC2_Instance.png
+│       └── 6_Website_Output.png
+```
+
+---
+
+## Workflow Overview
+
+1. Code is pushed to the GitHub repository.
+2. GitHub Actions automatically triggers the workflow.
+3. GitHub connects to the EC2 instance using SSH.
+4. Website files are copied to the EC2 server.
+5. Apache serves the updated website.
+6. Changes are deployed automatically without manual intervention.
+
+---
+
+## GitHub Actions Workflow
+
+The workflow file `deploy.yml` performs the following actions:
+
+- Checks out the repository.
+- Connects to the EC2 instance using SSH.
+- Copies website files to the server.
+- Deploys the files to the Apache web root directory.
+
+---
+
+## GitHub Secrets Used
+
+The following repository secrets were configured:
+
+| Secret Name | Purpose |
+|-------------|---------|
+| HOST | EC2 Public IP Address |
+| USERNAME | EC2 Username |
+| SSH_KEY | Private SSH Key used for authentication |
+
+---
+
+## Screenshots
+
+### Repository Structure
+
+![Repository Structure](Screenshots/1_Repository_Structure.png)
+
+---
+
+### GitHub Actions Workflow File
+
+![Deploy YML](Screenshots/2_Deploy_YML.png)
+
+---
+
+### GitHub Secrets Configuration
+
+![GitHub Secrets](Screenshots/3_GitHub_Secrets.png)
+
+---
+
+### Successful GitHub Actions Execution
+
+![GitHub Actions Success](Screenshots/4_GitHub_Actions_Success.png)
+
+---
+
+### AWS EC2 Instance
+
+![EC2 Instance](Screenshots/5_EC2_Instance.png)
+
+---
+
+### Website Output
+
+![Website Output](Screenshots/6_Website_Output.png)
+
+---
+
+## Website Output
+
+```
+CI/CD Pipeline Successfully Configured
+
+RD INFRO TECHNOLOGY Internship
+```
+
+---
+
+## Result
+
+Successfully implemented a CI/CD pipeline using **GitHub Actions** and **AWS EC2**. The website is automatically deployed whenever changes are pushed to the GitHub repository, demonstrating Continuous Integration and Continuous Deployment.
+
+---
+
+## Conclusion
+
+This task demonstrated the practical implementation of CI/CD using GitHub Actions and AWS EC2. Automated deployment improves efficiency, reduces manual effort, and ensures faster delivery of updates.
